@@ -1,6 +1,6 @@
 ﻿namespace KeyVN_Accounting
 {
-    partial class Import_form
+    partial class Export_form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Import_form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Export_form));
             this.title_2_lbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,8 +48,8 @@
             this.storage_name_txtbox = new System.Windows.Forms.TextBox();
             this.official_document_txtbox = new System.Windows.Forms.TextBox();
             this.storage_location_txtbox = new System.Windows.Forms.TextBox();
-            this.debt_txtbox = new System.Windows.Forms.TextBox();
-            this.courier_name_txtbox = new System.Windows.Forms.TextBox();
+            this.export_reason_txtbox = new System.Windows.Forms.TextBox();
+            this.recipient_name_txtbox = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label7 = new System.Windows.Forms.Label();
             this.browse_signature_btn = new System.Windows.Forms.Button();
@@ -58,9 +58,13 @@
             this.submit_btn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.recipient_address_txtbox = new System.Windows.Forms.TextBox();
+            this.money_txt_lbl = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.money_lbl = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.debt_amount_txtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.signature_picbox)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -72,12 +76,12 @@
             this.title_2_lbl.AutoSize = true;
             this.title_2_lbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title_2_lbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.title_2_lbl.Location = new System.Drawing.Point(162, 9);
+            this.title_2_lbl.Location = new System.Drawing.Point(234, 9);
             this.title_2_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title_2_lbl.Name = "title_2_lbl";
             this.title_2_lbl.Size = new System.Drawing.Size(311, 55);
             this.title_2_lbl.TabIndex = 3;
-            this.title_2_lbl.Text = "Import Form";
+            this.title_2_lbl.Text = "Export Form";
             // 
             // label2
             // 
@@ -87,16 +91,16 @@
             this.label2.Location = new System.Drawing.Point(7, 27);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 25);
+            this.label2.Size = new System.Drawing.Size(182, 25);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Courier full name:";
+            this.label2.Text = "Recipient full name:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(7, 71);
+            this.label1.Location = new System.Drawing.Point(7, 112);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 25);
@@ -108,7 +112,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(5, 114);
+            this.label3.Location = new System.Drawing.Point(5, 160);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 25);
@@ -130,7 +134,7 @@
             this.total_cost});
             this.dataGridView1.Location = new System.Drawing.Point(7, 19);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(609, 288);
+            this.dataGridView1.Size = new System.Drawing.Size(754, 288);
             this.dataGridView1.TabIndex = 7;
             // 
             // order_number
@@ -178,19 +182,19 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(345, 71);
+            this.label4.Location = new System.Drawing.Point(338, 112);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 25);
+            this.label4.Size = new System.Drawing.Size(136, 25);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Debt amount:";
+            this.label4.Text = "Export reason:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(14, 566);
+            this.label5.Location = new System.Drawing.Point(14, 613);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(224, 25);
@@ -202,7 +206,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(12, 630);
+            this.label6.Location = new System.Drawing.Point(12, 677);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(408, 25);
@@ -212,7 +216,7 @@
             // storage_name_txtbox
             // 
             this.storage_name_txtbox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.storage_name_txtbox.Location = new System.Drawing.Point(147, 63);
+            this.storage_name_txtbox.Location = new System.Drawing.Point(147, 109);
             this.storage_name_txtbox.Name = "storage_name_txtbox";
             this.storage_name_txtbox.Size = new System.Drawing.Size(193, 33);
             this.storage_name_txtbox.TabIndex = 11;
@@ -220,7 +224,7 @@
             // official_document_txtbox
             // 
             this.official_document_txtbox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.official_document_txtbox.Location = new System.Drawing.Point(12, 658);
+            this.official_document_txtbox.Location = new System.Drawing.Point(12, 705);
             this.official_document_txtbox.Name = "official_document_txtbox";
             this.official_document_txtbox.Size = new System.Drawing.Size(605, 33);
             this.official_document_txtbox.TabIndex = 12;
@@ -228,26 +232,26 @@
             // storage_location_txtbox
             // 
             this.storage_location_txtbox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.storage_location_txtbox.Location = new System.Drawing.Point(166, 111);
+            this.storage_location_txtbox.Location = new System.Drawing.Point(166, 157);
             this.storage_location_txtbox.Name = "storage_location_txtbox";
-            this.storage_location_txtbox.Size = new System.Drawing.Size(449, 33);
+            this.storage_location_txtbox.Size = new System.Drawing.Size(583, 33);
             this.storage_location_txtbox.TabIndex = 13;
             // 
-            // debt_txtbox
+            // export_reason_txtbox
             // 
-            this.debt_txtbox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.debt_txtbox.Location = new System.Drawing.Point(479, 63);
-            this.debt_txtbox.Name = "debt_txtbox";
-            this.debt_txtbox.Size = new System.Drawing.Size(136, 33);
-            this.debt_txtbox.TabIndex = 14;
+            this.export_reason_txtbox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.export_reason_txtbox.Location = new System.Drawing.Point(479, 109);
+            this.export_reason_txtbox.Name = "export_reason_txtbox";
+            this.export_reason_txtbox.Size = new System.Drawing.Size(270, 33);
+            this.export_reason_txtbox.TabIndex = 14;
             // 
-            // courier_name_txtbox
+            // recipient_name_txtbox
             // 
-            this.courier_name_txtbox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.courier_name_txtbox.Location = new System.Drawing.Point(176, 19);
-            this.courier_name_txtbox.Name = "courier_name_txtbox";
-            this.courier_name_txtbox.Size = new System.Drawing.Size(439, 33);
-            this.courier_name_txtbox.TabIndex = 16;
+            this.recipient_name_txtbox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.recipient_name_txtbox.Location = new System.Drawing.Point(187, 19);
+            this.recipient_name_txtbox.Name = "recipient_name_txtbox";
+            this.recipient_name_txtbox.Size = new System.Drawing.Size(262, 33);
+            this.recipient_name_txtbox.TabIndex = 16;
             // 
             // openFileDialog1
             // 
@@ -258,7 +262,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(7, 710);
+            this.label7.Location = new System.Drawing.Point(7, 757);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(225, 25);
@@ -271,7 +275,7 @@
             this.browse_signature_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.browse_signature_btn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.browse_signature_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.browse_signature_btn.Location = new System.Drawing.Point(244, 704);
+            this.browse_signature_btn.Location = new System.Drawing.Point(244, 751);
             this.browse_signature_btn.Margin = new System.Windows.Forms.Padding(2);
             this.browse_signature_btn.Name = "browse_signature_btn";
             this.browse_signature_btn.Size = new System.Drawing.Size(176, 40);
@@ -284,7 +288,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(7, 780);
+            this.label8.Location = new System.Drawing.Point(7, 827);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(297, 25);
@@ -294,7 +298,7 @@
             // signature_picbox
             // 
             this.signature_picbox.BackColor = System.Drawing.Color.Azure;
-            this.signature_picbox.Location = new System.Drawing.Point(12, 808);
+            this.signature_picbox.Location = new System.Drawing.Point(12, 855);
             this.signature_picbox.Name = "signature_picbox";
             this.signature_picbox.Size = new System.Drawing.Size(296, 82);
             this.signature_picbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -307,7 +311,7 @@
             this.submit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.submit_btn.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submit_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.submit_btn.Location = new System.Drawing.Point(42, 916);
+            this.submit_btn.Location = new System.Drawing.Point(129, 971);
             this.submit_btn.Margin = new System.Windows.Forms.Padding(2);
             this.submit_btn.Name = "submit_btn";
             this.submit_btn.Size = new System.Drawing.Size(541, 40);
@@ -317,17 +321,21 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.debt_amount_txtbox);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.recipient_address_txtbox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.storage_location_txtbox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.storage_name_txtbox);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.debt_txtbox);
-            this.groupBox1.Controls.Add(this.courier_name_txtbox);
+            this.groupBox1.Controls.Add(this.export_reason_txtbox);
+            this.groupBox1.Controls.Add(this.recipient_name_txtbox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(7, 79);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(622, 161);
+            this.groupBox1.Size = new System.Drawing.Size(767, 208);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Import information";
@@ -335,58 +343,98 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(7, 246);
+            this.groupBox2.Location = new System.Drawing.Point(7, 293);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(622, 317);
+            this.groupBox2.Size = new System.Drawing.Size(767, 317);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Item information";
             // 
-            // label12
+            // label9
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(450, 569);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(120, 25);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "420,000 VND";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(7, 73);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(166, 25);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Recipient address:";
+            // 
+            // recipient_address_txtbox
+            // 
+            this.recipient_address_txtbox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.recipient_address_txtbox.Location = new System.Drawing.Point(175, 65);
+            this.recipient_address_txtbox.Name = "recipient_address_txtbox";
+            this.recipient_address_txtbox.Size = new System.Drawing.Size(573, 33);
+            this.recipient_address_txtbox.TabIndex = 18;
+            // 
+            // money_txt_lbl
+            // 
+            this.money_txt_lbl.AutoSize = true;
+            this.money_txt_lbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.money_txt_lbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.money_txt_lbl.Location = new System.Drawing.Point(14, 638);
+            this.money_txt_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.money_txt_lbl.Name = "money_txt_lbl";
+            this.money_txt_lbl.Size = new System.Drawing.Size(328, 25);
+            this.money_txt_lbl.TabIndex = 24;
+            this.money_txt_lbl.Text = "Four Hundred And Twenty Thousands";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(321, 569);
+            this.label11.Location = new System.Drawing.Point(321, 613);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(135, 25);
-            this.label11.TabIndex = 28;
+            this.label11.TabIndex = 25;
             this.label11.Text = "Total amount: ";
             // 
-            // label10
+            // money_lbl
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(14, 594);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(328, 25);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Four Hundred And Twenty Thousands";
+            this.money_lbl.AutoSize = true;
+            this.money_lbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.money_lbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.money_lbl.Location = new System.Drawing.Point(450, 613);
+            this.money_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.money_lbl.Name = "money_lbl";
+            this.money_lbl.Size = new System.Drawing.Size(120, 25);
+            this.money_lbl.TabIndex = 26;
+            this.money_lbl.Text = "420,000 VND";
             // 
-            // Import_form
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.Location = new System.Drawing.Point(454, 22);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(131, 25);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "Debt amount:";
+            // 
+            // debt_amount_txtbox
+            // 
+            this.debt_amount_txtbox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.debt_amount_txtbox.Location = new System.Drawing.Point(590, 19);
+            this.debt_amount_txtbox.Name = "debt_amount_txtbox";
+            this.debt_amount_txtbox.Size = new System.Drawing.Size(159, 33);
+            this.debt_amount_txtbox.TabIndex = 20;
+            // 
+            // Export_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(641, 967);
-            this.Controls.Add(this.label12);
+            this.ClientSize = new System.Drawing.Size(786, 1022);
+            this.Controls.Add(this.money_lbl);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.money_txt_lbl);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.submit_btn);
@@ -399,7 +447,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.title_2_lbl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Import_form";
+            this.Name = "Export_form";
             this.Text = "Import Form";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -433,8 +481,8 @@
         private System.Windows.Forms.TextBox storage_name_txtbox;
         private System.Windows.Forms.TextBox official_document_txtbox;
         private System.Windows.Forms.TextBox storage_location_txtbox;
-        private System.Windows.Forms.TextBox debt_txtbox;
-        private System.Windows.Forms.TextBox courier_name_txtbox;
+        private System.Windows.Forms.TextBox export_reason_txtbox;
+        private System.Windows.Forms.TextBox recipient_name_txtbox;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button browse_signature_btn;
@@ -443,8 +491,12 @@
         private System.Windows.Forms.Button submit_btn;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox debt_amount_txtbox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox recipient_address_txtbox;
+        private System.Windows.Forms.Label money_txt_lbl;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label money_lbl;
     }
 }

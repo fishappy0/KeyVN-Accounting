@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="utilityClasses\dbAccess.cs" />
+    <Compile Include="utilityClasses\wordProcessing.cs" />
+    <Compile Include="Export_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export_form.Designer.cs">
+      <DependentUpon>Export_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Import_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Export_form.resx">
+      <DependentUpon>Export_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Import_form.resx">
       <DependentUpon>Import_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +96,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Content Include="documentTemplates\export_form.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="documentTemplates\import_form.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -126,5 +144,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

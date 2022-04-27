@@ -19,8 +19,8 @@ namespace KeyVN_Accounting
 
         private void button5_Click(object sender, EventArgs e)
         {
-                Import_form im_form = new Import_form();
-                im_form.ShowDialog();
+            Import_form im_form = new Import_form();
+            im_form.ShowDialog();
         }
     }
 }
