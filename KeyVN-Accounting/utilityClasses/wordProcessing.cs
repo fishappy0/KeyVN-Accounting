@@ -118,26 +118,27 @@ namespace KeyVN_Accounting
             {
                 int colIndex = 0;
                 int rowIndex = 0;
-                Word.Table Table = wordDoc.Tables[1];
+                Word.Table Table = wordDoc.Tables[3];
                 Grid.AllowUserToAddRows = false;
 
                 foreach (DataGridViewRow row in Grid.Rows)
                 {
                     if (rowIndex < Grid.Rows.Count - 1)
                     {
-                        Table.Rows.Add(Table.Cell(1, 1));
+                        Table.Rows.Add(Table.Cell(rowIndex + 4, 1));
                     }
                     colIndex = 0;
+                    Table.Cell(rowIndex + 4, colIndex).Range.Text = (rowIndex + 1).ToString();
                     foreach (DataGridViewColumn col in Grid.Columns)
                     {
                         var gridCellValue = Grid[colIndex, rowIndex].Value;
                         if (gridCellValue != null)
                         {
-                            Table.Cell(rowIndex + 1, colIndex).Range.Text = gridCellValue.ToString();
+                            Table.Cell(rowIndex + 4, colIndex + 2).Range.Text = gridCellValue.ToString();
                         }
                         else
                         {
-                            Table.Cell(rowIndex + 1, colIndex).Range.Text = "";
+                            Table.Cell(rowIndex + 4, colIndex + 2).Range.Text = "";
                         }
                         colIndex++;
                     }
